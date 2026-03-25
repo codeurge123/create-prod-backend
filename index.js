@@ -5,6 +5,11 @@ import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 
+
+// answer object will have projectName, useMongo, ENV, dependencies, npmi
+// to access these values we can use answer.projectName, answer.useMongo, answer.ENV, answer.dependencies, answer.npmi
+
+// through message we are taking input from terminal and name is for variable name and type is for type of input like confirm, checkbox etc and validate is for validation of input
 try {
     const answer = await inquirer.prompt([
         {
