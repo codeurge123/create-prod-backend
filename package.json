@@ -1,0 +1,22 @@
+{
+  "name": "create-prod-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "cli",
+    "backend",
+    "production",
+    "generator"
+  ],
+  "author": "codeurge123",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "inquirer": "^13.3.2"
+  }
+}
