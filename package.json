@@ -1,7 +1,7 @@
 {
   "name": "create-prod-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A cli tool to generate a production-ready backend boilerplate with Express.js, MongoDB, and essential features.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
