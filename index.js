@@ -5,6 +5,7 @@ import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 
+console.log("CLI is running...")
 
 // answer object will have projectName, useMongo, ENV, dependencies, npmi
 // to access these values we can use answer.projectName, answer.useMongo, answer.ENV, answer.dependencies, answer.npmi

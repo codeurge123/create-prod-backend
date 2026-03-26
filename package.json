@@ -1,8 +1,11 @@
 {
   "name": "create-prod-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A cli tool to generate a production-ready backend boilerplate with Express.js, MongoDB, and essential features.",
   "main": "index.js",
+  "bin": {
+    "create-prod-backend": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
@@ -13,7 +16,7 @@
     "production",
     "generator"
   ],
-  "author": "codeurge123",
+  "author": "codeurge316(@bansalyash)",
   "license": "ISC",
   "type": "module",
   "dependencies": {
