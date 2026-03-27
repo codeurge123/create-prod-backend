@@ -5,7 +5,7 @@ import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 
-console.log("CLI is running...")
+console.log("Welcome to the Express Backend Generator !!");
 
 // answer object will have projectName, useMongo, ENV, dependencies, npmi
 // to access these values we can use answer.projectName, answer.useMongo, answer.ENV, answer.dependencies, answer.npmi
@@ -290,6 +290,7 @@ coverage/
     }
 
     console.log(`\n${answer.projectName} project created successfully!\n`);
+    console.log("Happy coding! :)");
 } catch (error) {
     console.error("Error:", error.message);
     process.exit(1);
