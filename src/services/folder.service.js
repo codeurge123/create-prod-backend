@@ -17,7 +17,12 @@ export function createFolders(projectPath) {
     ];
 
     folders.forEach((folder) => {
-        fs.mkdirSync(path.join(projectPath, "src", folder), {
+        const folderPath =
+            folder === "public"
+                ? path.join(projectPath, folder, 'temp') 
+                : path.join(projectPath, "src", folder); 
+
+        fs.mkdirSync(folderPath, {
             recursive: true
         });
     });

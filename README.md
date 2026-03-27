@@ -1,12 +1,181 @@
-# create-prod-backend 🚀
+# create-prod-backend
 
-CLI tool to generate production-ready backend structure.
+Build a **production-ready Express backend** in seconds — no boilerplate, no setup headaches.
+
+---
+
+##  Installation
+
+Use directly with **npx** (recommended):
+
+```bash
+npx create-prod-backend
+```
+
+Or install globally:
+
+```bash
+npm install -g create-prod-backend
+create-prod-backend
+```
+
+---
+
+## Features
+
+*  Instant Express.js backend setup
+*  Clean and scalable folder structure
+*  Optional MongoDB integration
+*  Environment variable support (.env)
+*  Select dependencies interactively
+*  Production-ready scripts
+*  Developer-friendly CLI
+
+---
+
+## What It Generates
+
+```
+project-name/
+│
+├── src/
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   ├── middlewares/
+│   ├── utils/
+│   ├── db/
+│   │
+│   ├── app.js
+│   ├── index.js
+│   └── constants.js
+│
+├── public/
+│
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+```
+
+---
 
 ## Usage
 
+Run the CLI:
+
+```bash
+npx create-prod-backend
+```
+
+### You’ll be prompted for:
+
+* Project name
+* MongoDB setup (Yes/No)
+* .env file (Yes/No)
+* Dependencies to install
+* Auto install dependencies
+
+---
+
+## Supported Dependencies
+
+* express
+* nodemon
+* cors
+* bcryptjs
+* dotenv
+* jsonwebtoken
+* cookie-parser
+* cloudinary
+* multer
+* mongoose (optional)
+
+---
+
+## Scripts
+
+After setup:
+
+```bash
+npm run dev     # Development (nodemon)
+npm start       # Production
+```
+
+---
+
+## Example
+
+```bash
 npx create-prod-backend
 
-## Features
-- MongoDB setup
-- ENV config
-- Dependency selection
+✔ Enter project name: my-app
+✔ Use MongoDB: Yes
+✔ Use .env: Yes
+✔ Install dependencies: Yes
+```
+
+Your backend is ready!
+
+---
+
+## Tech Stack
+
+* Node.js
+* Express.js
+* MongoDB (optional)
+* Inquirer (CLI prompts)
+* Chalk (CLI styling)
+
+---
+
+## Upcoming Features
+
+* Service layer support
+* Auth template (JWT)
+* Docker setup
+* API documentation (Swagger)
+* TypeScript support
+
+---
+
+## Contributing
+
+Contributions are welcome!
+
+```bash
+git clone https://github.com/codeurge123/create-prod-backend
+cd create-prod-backend
+npm install
+```
+
+---
+
+## License
+
+ISC License
+
+---
+
+## Author
+
+Made by **codeurge316 - @yashbansal**
+
+---
+
+## Support
+
+If you like this project:
+
+* Star the repo
+* Share with others
+* Suggest new features
+
+---
+
+## Final Thought
+
+Stop wasting time setting up backend boilerplate.
+Start building real projects.
+
+- **create-prod-backend** does the setup — you build the product.

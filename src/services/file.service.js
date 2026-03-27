@@ -44,6 +44,11 @@ export function createFiles(projectPath, answer) {
         fs.writeFileSync(path.join(projectPath, ".env"), envTemplate());
     }
 
+    fs.writeFileSync(
+        path.join(projectPath, "README.md"),
+        `# ${answer.projectName}\n\nGenerated with create-prod-backend CLI.`
+    );
+
     // gitignore
     fs.writeFileSync(
         path.join(projectPath, ".gitignore"),
