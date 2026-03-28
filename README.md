@@ -79,17 +79,18 @@ npx create-prod-backend
 ---
 
 ## Supported Dependencies
-
 * express
-* nodemon
 * cors
-* bcryptjs
 * dotenv
-* jsonwebtoken
 * cookie-parser
-* cloudinary
-* multer
-* mongoose (optional)
+* nodemon (devDependency)
+* bcryptjs (Optional)
+* zod (Optional)
+* argon2 (Optional)
+* jsonwebtoken (Optional)
+* cloudinary (Optional)
+* multer (Optional)
+* mongoose (Optional)
 
 ---
 

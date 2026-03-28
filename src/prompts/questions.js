@@ -24,9 +24,10 @@ export default [
     message: chalk.bold.yellow("Do you want .env?"),
   },
   {
-    type: "confirm",
+    type: "select",
     name: "auth",
-    message: chalk.bold.yellow("Add Authentication (JWT + bcrypt)?"),
+    message: chalk.bold.yellow("Add Authentication : "),
+    choices: ["No Authentication", "JWT + bcryptjs", "JWT + argon2"],
   },
 
   {

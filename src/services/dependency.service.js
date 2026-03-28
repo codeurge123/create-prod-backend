@@ -4,7 +4,8 @@ import { execSync } from "child_process";
 export function installDeps(projectPath, answer) {
     let deps = ["express","cors","dotenv","cookie-parser"];
 
-    if(answer.auth) deps.push("jsonwebtoken", "bcrypt");
+    if(answer.auth === "JWT + bcryptjs") deps.push("jsonwebtoken", "bcryptjs");
+    if(answer.auth === "JWT + argon2") deps.push("jsonwebtoken", "argon2");
     if(answer.validation) deps.push("zod");
     if(answer.fileUpload) deps.push("multer", "cloudinary");
     if(answer.devTools) deps.push("nodemon");
