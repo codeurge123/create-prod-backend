@@ -13,8 +13,8 @@ export function initPackage(projectPath) {
 
     pkg.type = "module";
     pkg.scripts = {
-        start: "node index.js",
-        dev: "nodemon index.js",
+        start: "node src/index.js",
+        dev: "nodemon src/index.js",
     };
 
     fs.writeFileSync(pkgPath, JSON.stringify(pkg, null, 2));
