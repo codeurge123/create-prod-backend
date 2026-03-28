@@ -1,13 +1,17 @@
+import chalk from "chalk";
 import { execSync } from "child_process";
 
 export function installDeps(projectPath, answer) {
-    let deps = [...answer.dependencies];
+    let deps = ["express","cors","dotenv","cookie-parser"];
 
-    if (answer.useMongo) {
-        deps.push("mongoose");
-    }
+    if(answer.auth) deps.push("jsonwebtoken", "bcrypt");
+    if(answer.validation) deps.push("zod");
+    if(answer.fileUpload) deps.push("multer", "cloudinary");
+    if(answer.devTools) deps.push("nodemon");
 
-    deps = deps.map(dep => dep.replace(/['"]/g, "").trim());
+    if (answer.useMongo) deps.push("mongoose");
+
+    // deps = deps.map(dep => dep.replace(/['"]/g, "").trim());
 
     const dev = [];
     const normal = [];
@@ -17,7 +21,7 @@ export function installDeps(projectPath, answer) {
         else normal.push(dep);
     });
 
-    console.log("Installing:", normal, dev); // debug
+    console.log(chalk.cyanBright("Installing:"), normal, dev); // debug
 
     if (normal.length) {
         execSync(`npm i ${normal.join(" ")}`, {

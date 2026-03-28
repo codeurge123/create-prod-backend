@@ -24,20 +24,27 @@ export default [
     message: chalk.bold.yellow("Do you want .env?"),
   },
   {
-    type: "checkbox",
-    name: "dependencies",
-    message: chalk.bold.yellow("Select dependencies to install:"),
-    choices: [
-      "express",
-      "nodemon",
-      "cors",
-      "bcryptjs",
-      "dotenv",
-      "jsonwebtoken",
-      "cookie-parser",
-      "cloudinary",
-      "multer",
-    ],
+    type: "confirm",
+    name: "auth",
+    message: chalk.bold.yellow("Add Authentication (JWT + bcrypt)?"),
+  },
+
+  {
+    type: "confirm",
+    name: "validation",
+    message: chalk.bold.yellow("Add Validation (Zod)?"),
+  },
+
+  {
+    type: "confirm",
+    name: "fileUpload",
+    message: chalk.bold.yellow("Add File Upload (Multer + Cloudinary)?"),
+  },
+
+  {
+    type: "confirm",
+    name: "devTools",
+    message: chalk.bold.yellow("Add Dev Tools (Nodemon)?"),
   },
   {
     type: "confirm",
