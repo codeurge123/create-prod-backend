@@ -20,6 +20,11 @@ export default [
   },
   {
     type: "confirm",
+    name: "useDocker",
+    message: chalk.bold.yellow("Do you want Docker Setup?")
+  },
+  {
+    type: "confirm",
     name: "ENV",
     message: chalk.bold.yellow("Do you want .env?"),
   },

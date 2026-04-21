@@ -2,21 +2,24 @@ import fs from "fs";
 import path from "path";
 
 import { indexTemplate } from "../templates/base/index.template.js";
+import { dockerfileTemplate } from "../templates/docker-setup/docker.template.js"
 import { appTemplate } from "../templates/base/app.template.js";
 import { mongoTemplate } from "../templates/db/mongo.template.js";
 import { envTemplate } from "../templates/config/env.template.js";
 import { utilsTemplates } from "../templates/utils/utils.template.js";
+import { dockercomposeTemplate } from "../templates/docker-setup/dockercompose.template.js"
+import { dockerignoreTemplate } from "../templates/docker-setup/dockerignore.template.js"
 
 export function createFiles(projectPath, answer) {
     // index.js
     fs.writeFileSync(
-        path.join(projectPath,"src", "index.js"),
+        path.join(projectPath, "src", "index.js"),
         indexTemplate(answer)
     );
 
     // app.js
     fs.writeFileSync(
-        path.join(projectPath,"src", "app.js"),
+        path.join(projectPath, "src", "app.js"),
         appTemplate(answer)
     );
 
@@ -42,6 +45,13 @@ export function createFiles(projectPath, answer) {
     // .env
     if (answer.ENV) {
         fs.writeFileSync(path.join(projectPath, ".env"), envTemplate(answer));
+    }
+
+    // docker
+    if (answer.useDocker) {
+        fs.writeFileSync(path.join(projectPath, 'Dockerfile'), dockerfileTemplate());
+        fs.writeFileSync(path.join(projectPath, 'docker-compose.yml'), dockercomposeTemplate());
+        fs.writeFileSync(path.join(projectPath, '.dockerignore'), dockerignoreTemplate());
     }
 
     fs.writeFileSync(

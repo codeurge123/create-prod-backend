@@ -1,6 +1,6 @@
 # create-prod-backend
 
-Build a **production-ready Express backend** in seconds — no boilerplate, no setup headaches.
+Build a **production-ready Next.js App & Express backend** in seconds — no boilerplate, no setup headaches.
 
 ---
 
@@ -35,6 +35,7 @@ create-prod-backend
 
 ## What It Generates
 
+### Express Backend 
 ```
 project-name/
 │
@@ -51,12 +52,41 @@ project-name/
 │   └── constants.js
 │
 ├── public/
-│
+│    └──temp/
+|
 ├── .env
+├── Dockerfile
+├── .dockerignore
+├── docker-compose.yml
 ├── .gitignore
 ├── package.json
 └── README.md
 ```
+
+### Next.js App
+
+```
+my-app/
+│── app/
+│   ├── layout.js
+│   ├── page.js
+│   ├── globals.css
+│
+│── public/
+│   ├── favicon.ico
+│   ├── images...
+│
+│── node_modules/
+│
+│── package.json
+│── package-lock.json / yarn.lock
+│── next.config.js
+│── jsconfig.json / tsconfig.json
+│── .gitignore
+│── README.md
+
+```
+
 
 ---
 
@@ -134,8 +164,8 @@ Your backend is ready!
 
 * Service layer support
 * Auth template (JWT)
-* Docker setup
-* API documentation (Swagger)
+* Docker setup - ✔️
+* Soon Implement own Next.js - currently uses vercel package
 * TypeScript support
 
 ---
