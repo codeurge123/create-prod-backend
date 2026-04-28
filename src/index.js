@@ -27,7 +27,7 @@ export default async function runCLI() {
     await createProject(answer);
 
     console.log(chalk.green(`\n${chalk.bold(answer.projectName)} project created successfully!\n`));
-    console.log(chalk.yellow("You can change Docker file according to your need"));
+    if(answer.useDocker) console.log(chalk.yellow("You can change Docker file according to your need"));
     console.log(chalk.yellow("Happy coding! :)"));
   } catch (error) {
     console.error(chalk.red(("Error:", error.message)));
