@@ -8,6 +8,7 @@ export function installDeps(projectPath, answer) {
     if(answer.auth === "JWT + argon2") deps.push("jsonwebtoken", "argon2");
     if(answer.validation) deps.push("zod");
     if(answer.fileUpload) deps.push("multer", "cloudinary");
+    if(answer.redis) deps.push("ioredis")
     if(answer.devTools) deps.push("nodemon");
 
     if (answer.useMongo) deps.push("mongoose");

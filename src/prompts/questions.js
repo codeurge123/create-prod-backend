@@ -46,7 +46,11 @@ export default [
     name: "fileUpload",
     message: chalk.bold.yellow("Add File Upload (Multer + Cloudinary)?"),
   },
-
+  {
+    type: "confirm",
+    name: "redis",
+    message: chalk.bold.yellow("Add Redis (ioredis)?")
+  },
   {
     type: "confirm",
     name: "devTools",
